@@ -1,0 +1,15 @@
+﻿<Window x:Class="LanguageTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LanguageTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel HorizontalAlignment="Center">
+        <ComboBox x:Name="LanguageList" SelectedIndex="0" Margin="10" SelectionChanged="LanguageList_SelectionChanged"/>
+        <TextBlock FontSize="20" Margin="10" Text="{Binding [String1], Source={x:Static local:LanguageManager.Instance}}"/>
+        <TextBox FontSize="20" Margin="10" Text="{Binding [String2], Source={x:Static local:LanguageManager.Instance}, Mode=OneWay}"/>
+        <Button FontSize="20" Margin="10" Content="{Binding [String3], Source={x:Static local:LanguageManager.Instance}, Mode=OneWay}"/>
+    </StackPanel>
+</Window>
